@@ -1,0 +1,3 @@
+[submodule "ibus-utils"]
+	path = ibus-utils
+	url = https://github.com/clear-code/ibus-utils.git

@@ -1,0 +1,7 @@
+{
+  "name": "com.clear_code.ime_mode_we_host",
+  "description": "IME Mode WE Native Messaging Host",
+  "path": "/usr/local/bin/ime-mode-we",
+  "type": "stdio",
+  "allowed_extensions": [ "ime-mode-we@clear-code.com" ]
+}

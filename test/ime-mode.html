@@ -1,0 +1,95 @@
+<html>
+  <head>
+    <meta charset="utf8">
+    <script>
+    function insertInput() {
+      let label = document.createElement("label");
+      label.innerText = "[ime-mode: active]";
+
+      let input = document.createElement("input");
+      input.type = "text";
+      input.style = "ime-mode: active;";
+
+      let target = document.getElementById("additional-area");
+      target.appendChild(label);
+      target.appendChild(input);
+      target.appendChild(document.createElement("br"));
+    }
+
+    function insertTree() {
+      let div = document.createElement("div");
+
+      let label = document.createElement("label");
+      label.innerText = "[ime-mode: active]";
+      let input = document.createElement("input");
+      input.type = "text";
+      input.style = "ime-mode: active;";
+      div.appendChild(label);
+      div.appendChild(input);
+      div.appendChild(document.createElement("br"));
+
+      label = document.createElement("label");
+      label.innerText = "[ime-mode: inactive]";
+      input = document.createElement("input");
+      input.type = "text";
+      input.style = "ime-mode: inactive;";
+      div.appendChild(label);
+      div.appendChild(input);
+      div.appendChild(document.createElement("br"));
+
+      document.getElementById("additional-area2").appendChild(div);
+    }
+
+    function change() {
+      let e = document.getElementById("submit");
+      e.type = "text;"
+      e.style = "ime-mode: active;";
+
+      let address = document.getElementById("address");
+      address.style = "ime-mode: inactive;"
+      let label = document.getElementById("address-label");
+      label.innerText = "住所 (ime-mode: inactive)";
+    }
+    </script>
+  <head>
+
+  <body>
+    <input type="button" value="InsertInput" onclick="insertInput()">
+    <input type="button" value="InsertTree" onclick="insertTree()">
+    <input type="button" value="Change" onclick="change()"><br>
+
+    <div>
+      <label for="id">ID (ime-mode: disabled)</label><br>
+    <input type="text" id="id" size="30" style="ime-mode: disabled;">
+    </div>
+
+    <div>
+    <label for="name">名前 (ime-mode: active)</label><br>
+    <input type="text" id="name" size="40" style="ime-mode: active;">
+    </div>
+
+    <div>
+    <label for="email">メール (ime-mode: inactive)</label><br>
+    <input type="email" id="email" size="40" style="ime-mode: inactive;">
+    </div>
+
+    <div>
+    <label for="address" id="address-label">住所 (ime-mode: active)</label><br>
+    <textarea id="address" rows="2" cols="40" style="ime-mode: active;"></textarea><br>
+    </div>
+
+    <div>
+    <label for="remarks">備考 (ime-mode: auto)</label><br>
+    <textarea id="remarks" rows="2" cols="40" style="ime-mode: auto;"></textarea>
+    </div>
+
+    <input type="submit" id="submit" value="送信">
+    <input type="reset" value="リセット">
+
+    <div id="additional-area">
+      <div id="additional-area2">
+      </div>
+    </div>
+  </body>
+</html>
+
