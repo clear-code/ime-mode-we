@@ -1,6 +1,6 @@
 # ime-mode-we
 
-Provides an ability to handle the [`ime-mode`](https://developer.mozilla.org/en-US/docs/Web/CSS/ime-mode) CSS property on GNU/Linux. Becuase Firefox on GNU/Linux doesn't support `active` and `inactive` values of `ime-mode`, this extension complements handling these values by calling a native command.
+Provides an ability to handle the [`ime-mode`](https://developer.mozilla.org/en-US/docs/Web/CSS/ime-mode) CSS property on GNU/Linux. Because Firefox on GNU/Linux doesn't support `active` and `inactive` values of `ime-mode`, this extension complements handling these values by calling a native command.
 
 You need to install not only the Firefox extension but also the native connector for it to work. It supports only [IBus](https://github.com/ibus) as an IM framework and a few engines for it by default.
 
