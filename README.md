@@ -26,8 +26,7 @@ You need to install not only the Firefox extension but also the native connector
   
 ## How to install the extension permanently
 
-  * TODO
-  * See: https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/Distribution
+  * Install from https://addons.mozilla.org/en-US/firefox/addon/ime-mode-we/
 
 ## Supported IM frameworks
 
