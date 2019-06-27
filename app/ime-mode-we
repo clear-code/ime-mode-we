@@ -31,17 +31,16 @@ def getMessage():
     return json.loads(message)
 
 
-while True:
-    mode = getMessage()
-    if mode != "active" and mode != "inactive":
-        continue
+mode = getMessage()
+if mode != "active" and mode != "inactive":
+    sys.exit(0)
 
-    # Sometimes ibus-set-input-mode fails due to unstability of IBus.
-    # To avoid it, retry on the error.
-    for i in range(1, 5):
-        try:
-            subprocess.call(["/usr/local/bin/ibus-set-input-mode", mode])
-            break
-        except CalledProcessError as e:
-            if e.returncode != 1:
-               break
+# Sometimes ibus-set-input-mode fails due to unstability of IBus.
+# To avoid it, retry on the error.
+for i in range(1, 5):
+    try:
+        subprocess.call(["/usr/local/bin/ibus-set-input-mode", mode])
+        break
+    except CalledProcessError as e:
+        if e.returncode != 1:
+           break
